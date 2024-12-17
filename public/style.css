@@ -1,0 +1,204 @@
+/* Vispārīgie stili */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Iesaka iekļaut, lai nodrošinātu elementu izmēru konsekvenci */
+}
+
+/* Galvenes stili */
+.header {
+    padding: 20px;
+    text-align: center; /* Centrē logo */
+    background-color: #f6a828;
+}
+
+.logo {
+    width: 150px; /* Jūs varat pielāgot logo izmēru atkarībā no jūsu vajadzībām */
+    height: auto; /* Saglabā logo proporcijas */
+}
+
+header nav ul {
+    list-style-type: none;
+    background-color: #f6a828;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+    color: black; /* Maina teksta krāsu uz melnu, kad pele ir virsū */
+}
+
+/* Produkta saraksta stili */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-item {
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Izsauciet darbība stils */
+.call-to-action {
+    background-color: #d5d3d3; /* Piešķir balto fonu */
+    padding: 40px 50px; /* Pievieno padding sekcijai, lai teksts un saturs nebūtu tieši pie malām */
+    margin: 20px auto; /* Pievieno margin automātiski abās pusēs, lai centrētu sekciju un radītu baltas malas */
+    max-width: 80%; /* Ierobežo sekcijas platumu, lai veidotu malas */
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1); /* Pievieno nelielu ēnu ap sekciju, lai uzlabotu vizuālo atdalīšanu */
+    text-align: center; /* Centrē tekstu sekcijā */
+}
+
+/* Kājas stils */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Sociālo tīklu ikonas */
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+}
+
+.social-icons i {
+    font-size: 24px; /* Izmēru var mainīt pēc nepieciešamības */
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a:hover {
+    color: #db753e; /* Krāsas maiņa peles virsū */
+}
+
+/* Mēģinājuma stili */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image {
+    max-width: 40%; /* Piešķir maksimālo platumu attēlam */
+    height: auto; /* Saglabā attēla proporcijas */
+    margin-right: 20px; /* Atstarpe starp attēlu un tekstu */
+}
+
+.text {
+    max-width: 60%;
+}
+
+.text h1 {
+    color: darkgreen; /* Teksta krāsa, pielāgojama */
+    font-size: 2.5em; /* Lielāks fonta izmērs virsrakstam */
+}
+
+.text p {
+    font-size: 1.2em; /* Palielināts fonta izmērs paragrāfiem */
+    line-height: 1.5; /* Rindiņas augstums */
+    color: #333; /* Teksta krāsa */
+    margin-bottom: 10px; /* Atstarpe starp paragrāfiem */
+}
+
+/* Produktu galerijas stili */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.product-item img {
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the images are nicely cropped */
+}
+
+.product-item h2 {
+    color: #333;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Produkta detalizētas skata stili */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Piešķir vienmērīgas atstarpes starp elementiem */
+    padding: 20px;
+}
+
+.card {
+    flex: 0 1 30%; /* Ļauj katram elementam aizņemt aptuveni 30% platuma ar mazu elastību */
+    margin-bottom: 20px; /* Pievieno atstarpi zem katras kartiņas */
+}
+
+.card-img-top {
+    width: 100%; /* Nodrošina, ka attēls aizņem visu kārtiņas augšdaļu */
+    height: 280px; /* Saglabā attēla proporcijas */
+}
+
+.card-body {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 48%; /* Pārslēdzas uz divām kolonnām zemākā izšķirtspējā */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 0 1 100%; /* Pārslēdzas uz vienu kolonnu viszemākajā izšķirtspējā */
+    }
+}
+
+/* Par lapu "Par mums" stili */
+.highlight {
+    background-color: #f8f9fa; /* Gaišs pelēks fons */
+    border-left: 5px solid #553d11; /* Zila vertikāla josla pa kreisi */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Vieglā ēna apkārt teksta blokam */
+}
+
+/* Produkta attēla stili detalizētajā skatā */
+.product-image {
+    max-width: 300px; /* Ierobežo attēlu izmēru, lai tas nepārsniegtu konteineri */
+    height: auto; /* Automātiski pielāgo augstumu attiecībā pret platību */
+}
